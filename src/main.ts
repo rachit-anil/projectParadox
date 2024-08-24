@@ -4,7 +4,7 @@ import { AppComponent } from "./app/app.component";
 import { provideHttpClient } from "@angular/common/http";
 import { RouterModule, provideRouter } from "@angular/router";
 import { AuthGuard } from "./app/guards/auth.guard";
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -13,9 +13,9 @@ bootstrapApplication(AppComponent, {
       {
         path: "login",
         loadComponent: () =>
-          import("./app/authentication/login/login.component").then(
-            (m) => m.LoginComponent
-          ),
+          import(
+            "./app/authentication/login-sign-up/login-sign-up.component"
+          ).then((m) => m.LoginSignUpComponent),
       },
       {
         path: "home",
@@ -31,6 +31,7 @@ bootstrapApplication(AppComponent, {
         canActivate: [AuthGuard],
       },
       { path: "**", redirectTo: "home", pathMatch: "full" },
-    ]), provideAnimationsAsync(),
+    ]),
+    provideAnimationsAsync(),
   ],
 });

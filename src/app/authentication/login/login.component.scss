@@ -7,11 +7,12 @@
   height: 100vh;
 
   .login-form {
-    border: 1px solid antiquewhite;
+    border: 1px solid #fff;
     padding: 48px;
-    background-color: antiquewhite;
+    background-color: #fff;
     border-radius: 5%;
     width: 250px;
+    box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.3);
 
     mat-form-field {
       width: 100%;
@@ -21,5 +22,9 @@
     .login-text {
       margin: 16px 0;
     }
+  }
+
+  button {
+    margin-top: 8px;
   }
 }

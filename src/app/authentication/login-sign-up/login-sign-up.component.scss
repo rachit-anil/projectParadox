@@ -1,0 +1,22 @@
+@import '../../../styles';
+
+.login-signup-container {
+  @include center-contents;
+  width: 100vw;
+  height: 100vh;
+
+  .forms {
+    @include center-contents;
+    border: 1px solid #fff;
+    padding: 48px;
+    background-color: #fff;
+    border-radius: 5%;
+    width: 250px;
+    min-height: 250px;
+    box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.3);
+
+    button {
+      margin-top: 16px;
+    }
+  }
+}
